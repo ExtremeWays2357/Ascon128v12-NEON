@@ -7,11 +7,8 @@
 .type permutation STT_FUNC
 permutation:
 permutation:
-
+SETEND LE
 VLDM.64 r0, {d1-d5}
-VREV64.8 d1, d1
-VREV64.8 q1, q1
-VREV64.8 q2, q2
 MOV r3, #0xf
 VMOV.I8 d0, #0
 
@@ -101,9 +98,6 @@ VEOR q2, q2, q15
 add r1, r1, #1
 CMP r1, r2
 bne ._looptop
-VREV64.8 d1, d1
-VREV64.8 q1, q1
-VREV64.8 q2, q2
 VPOP {q4,q5,q6,q7}
 VSTM.64 r0, {d1-d5}
 # return with the link register
