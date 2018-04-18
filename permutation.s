@@ -21,7 +21,7 @@ sub r12, r3, r1
 LSL r12, r12, #4
 orr r12, r12, r1  
 #########################
-# START OF substitution #
+# START OF SUBSTITUTION #
 #########################
 VEOR d14, d1, d5
 VEXT.64 d6, d2, d2, #0
